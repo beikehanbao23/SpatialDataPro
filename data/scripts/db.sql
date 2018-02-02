@@ -27,8 +27,6 @@ CREATE TABLE "public"."place" (
     "desc_cn" text COLLATE "default",
     "desc_other" text COLLATE "default",
     "population" int4,
-    "capital" bool,
-    "is_capital" bool,
     "admin_level" int4,
     "admin_type" int4,
     "geometry" "public"."geometry",
