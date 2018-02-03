@@ -60,5 +60,4 @@ alter table place alter column arcgisid set default nextval('arcgis_id_seq');
 CREATE INDEX  "place_idx" ON "public"."place" USING btree(id ASC NULLS LAST);
 CREATE INDEX  "place_geom_idx" ON "public"."place" USING gist(geometry);
 
-CREATE INDEX ON ON "public"."place"
-USING btree (st_geohash(st_transform(st_setsrid(box2d(geometry)::geometry, 3857), 4326)));
+CREATE INDEX ON "public"."place" USING btree (st_geohash(st_transform(st_setsrid(box2d(geometry)::geometry, 3857), 4326)));
